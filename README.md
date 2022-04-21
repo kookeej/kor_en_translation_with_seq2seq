@@ -10,7 +10,6 @@
 * `BucketIterator`를 통해 비슷한 길이의 시퀀스끼리 같은 배치에 묶이도록 했습니다.
 * 최고 성능 모델을 저장하여 실시간으로 실행시켜 결과를 살펴볼 수 있는 코드를 추가하였습니다.([나동빈님의 코드 참고](https://github.com/ndb796/Deep-Learning-Paper-Review-and-Practice/blob/master/code_practices/Sequence_to_Sequence_with_LSTM_Tutorial.ipynb))
 
-## Setting
 ### 데이터셋
 * AI hub 한국어-영어 번역(병렬) 말뭉치-구어체(https://aihub.or.kr/aidata/87)
 * 20만개 데이터셋
@@ -18,6 +17,7 @@
   * 검증 데이터셋: 10,000
   * 테스트 데이터셋: 10,000
 
+### Settings
 * Batch size: 256
 * Epochs: 20
 
@@ -25,6 +25,8 @@
 ![image](https://user-images.githubusercontent.com/74829786/164406902-6b9c8970-9359-4172-9c5d-472781c879e2.png)
 
 ## 결과 분석
+* 시퀀스가 길어질수록 the/is와 같은 빈도가 높지만 의미는 없는 단어들의 반복이 심해졌다.
+* 문장에 포함되는 핵심 단어는 잘 가져왔지만 의미가 전혀 다르게 번역되었다.
 
 ## Reference
 * 결과 실행 코드: https://github.com/ndb796/Deep-Learning-Paper-Review-and-Practice/blob/master/code_practices/Sequence_to_Sequence_with_LSTM_Tutorial.ipynb
